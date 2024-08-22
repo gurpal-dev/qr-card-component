@@ -1,0 +1,87 @@
+:root {
+
+    --clr-primary: rgb(31, 49, 79) ; 
+    --clr-secondary:rgb(104, 119, 141) ; 
+    --clr-bg: rgb(213, 225, 239); 
+
+    --clr-neutral: white; 
+
+    --clr-headings: var(--clr-primary); 
+    --clr-para: var(--clr-secondary); 
+
+    --spacing-sm: 1rem; 
+    --spacing-md: 1.5rem; 
+    --spacing-large: 2.5rem;
+    
+    --fs-base: 0.7275rem; 
+    --fs-large: 1.1rem; 
+
+    --fw-regular: 400; 
+    --fw-medium: 550; 
+    --fw-bold: 700; 
+
+
+}
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font: inherit; 
+
+}
+
+body { 
+    font-family: "Outfit", sans-serif;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background: var(--clr-bg);
+}
+
+@media (max-width: 312px) {
+    body{
+        padding: 0 1rem 0 1rem;
+    }
+}
+
+.wrapper-card {
+    display: grid; 
+    gap: var(--spacing-sm); 
+    max-width: 270px;
+    height: auto; 
+    background: var(--clr-neutral); 
+    padding: var(--spacing-sm); 
+    border-radius: 1rem;
+    text-align: center; 
+}
+
+.qr-card {
+    width: 100%; 
+}
+
+.qr-card img {
+    max-width: 100%;
+    border-radius: .5rem;
+}
+
+.card-content { 
+    display: grid; 
+    gap: var(--spacing-sm); 
+    padding: 0 var(--spacing-sm) var(--spacing-sm) var(--spacing-sm); 
+}
+
+.card-content h2 {
+    font-size: var(--fs-large); 
+    font-weight: var(--fw-bold); 
+    color: var(--clr-headings); 
+    /* max-width: 20ch; */
+}
+
+.card-content p { 
+    font-size: var(--fs-base); 
+    font-weight: var(--fw-regular); 
+    color: var(--clr-para); 
+}
